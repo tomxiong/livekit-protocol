@@ -92,6 +92,7 @@ message RTCNodeMessage {
     SendDataRequest send_data = 9;
     UpdateRoomMetadataRequest update_room_metadata = 10;
     KeepAlive keep_alive = 12;
+    RoomParticipantSid remove_participant_sid = 13;
   }
 }
 

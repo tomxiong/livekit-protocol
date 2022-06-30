@@ -92,6 +92,13 @@ message RoomParticipantIdentity {
   string identity = 2;
 }
 
+message RoomParticipantSid {
+  // name of the room
+  string room = 1;
+  // sid of the participant
+  string sid = 2;
+}
+
 message RemoveParticipantResponse {
 }
 
