@@ -9,6 +9,7 @@ import (
 
 	"github.com/eapache/channels"
 	"github.com/go-redis/redis/v8"
+	redisClient "github.com/livekit/protocol/utils/redis"
 	"github.com/prometheus/client_golang/prometheus"
 	"google.golang.org/protobuf/proto"
 )
@@ -44,10 +45,10 @@ type PubSub interface {
 }
 
 type RedisMessageBus struct {
-	rc *redis.Client
+	rc redisClient.RedisClient
 }
 
-func NewRedisMessageBus(rc *redis.Client) MessageBus {
+func NewRedisMessageBus(rc redisClient.RedisClient) MessageBus {
 	return &RedisMessageBus{rc: rc}
 }
 

@@ -3,6 +3,7 @@ package egress
 import (
 	"context"
 	"errors"
+	redisClient "github.com/livekit/protocol/utils/redis"
 	"time"
 
 	"github.com/go-redis/redis/v8"
@@ -51,7 +52,7 @@ type RedisRPC struct {
 	bus    *utils.RedisMessageBus
 }
 
-func NewRedisRPCClient(nodeID livekit.NodeID, rc *redis.Client) RPCClient {
+func NewRedisRPCClient(nodeID livekit.NodeID, rc redisClient.RedisClient) RPCClient {
 	if rc == nil {
 		return nil
 	}
