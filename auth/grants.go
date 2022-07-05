@@ -1,7 +1,7 @@
 package auth
 
 import (
-	"github.com/livekit/protocol/livekit"
+	"github.com/tomxiong/protocol/livekit"
 )
 
 type VideoGrant struct {

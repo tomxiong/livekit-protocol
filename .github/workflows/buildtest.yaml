@@ -18,7 +18,7 @@ jobs:
           ~/go/pkg/mod
           ~/go/bin
           ~/.cache
-        key: livekit-protocol
+        key: protocol
 
     - name: Set up Go
       uses: actions/setup-go@v2

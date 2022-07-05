@@ -16,7 +16,7 @@ jobs:
           ~/go/pkg/mod
           ~/go/bin
           ~/.cache
-        key: livekit-protocol
+        key: protocol
 
     - name: Install Protoc
       uses: arduino/setup-protoc@v1
