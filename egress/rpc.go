@@ -6,7 +6,6 @@ import (
 	redisClient "github.com/tomxiong/protocol/utils/redis"
 	"time"
 
-	"github.com/go-redis/redis/v8"
 	"google.golang.org/protobuf/proto"
 
 	"github.com/tomxiong/protocol/livekit"
@@ -122,7 +121,7 @@ func (r *RedisRPC) SendRequest(ctx context.Context, request proto.Message) (*liv
 	}
 }
 
-func NewRedisRPCServer(rc *redis.Client) RPCServer {
+func NewRedisRPCServer(rc redisClient.RedisClient) RPCServer {
 	bus := utils.NewRedisMessageBus(rc)
 	return &RedisRPC{
 		bus: bus.(*utils.RedisMessageBus),
